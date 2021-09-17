@@ -11,7 +11,11 @@ export const StyledForm = styled.form`
   }
 
   .circle {
-    border: 1px solid ${props => props.darkTheme ? "var(--circle-border-dark)" : "var(--circle-border-light)"};
+    border: 1px solid
+      ${(props) =>
+        props.darkTheme
+          ? "var(--circle-border-dark)"
+          : "var(--circle-border-light)"};
     flex-shrink: 0;
     width: 25px;
     height: 25px;
@@ -26,8 +30,21 @@ export const StyledForm = styled.form`
     border: none;
     padding: 1.3em 1.4em;
     font-family: inherit;
-    font-size: 1.1rem;
+    font-size: inherit;
     color: ${(props) =>
       props.darkTheme ? "var(--list-dark)" : "var(--list-light)"};
+  }
+
+  @media (max-width: 500px) {
+    font-size: 0.8rem;
+
+    .circle {
+      width: 20px;
+      height: 20px;
+    }
+
+    input {
+      padding: 1.4em;
+    }
   }
 `;

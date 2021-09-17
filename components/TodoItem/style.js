@@ -32,6 +32,7 @@ export const StyledItem = styled.div`
     padding: 1.2em 1.4em;
     word-wrap: break-word;
     text-decoration: ${(props) => props.completed && "line-through"};
+    font-weight: 600;
   }
 
   .delete {
@@ -59,5 +60,22 @@ export const StyledItem = styled.div`
     margin-left: 1.3em;
     border-radius: 50%;
     cursor: pointer;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 0.8rem;
+
+    .circle {
+      width: 20px;
+      height: 20px;
+    }
+
+    .todo-title {
+      padding: 1.4em 1.4em;
+    }
+
+    .delete {
+      display: block;
+    }
   }
 `;

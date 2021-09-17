@@ -16,7 +16,7 @@ export const Main = styled.main`
     height: 100vh;
     max-width: 540px;
     margin: auto;
-    padding: 5em 1em;
+    padding: 5em 1.2em;
   }
 
   .title {
@@ -28,5 +28,22 @@ export const Main = styled.main`
   .header {
     display: flex;
     justify-content: space-between;
+  }
+
+  @media (max-width: 500px) {
+    background-image: ${(props) =>
+      props.darkTheme
+        ? "url('/images/bg-mobile-dark.jpg')"
+        : "url('/images/bg-mobile-light.jpg')"};
+    background-size: 100vw 35vh;
+    .title {
+      font-size: 1.5em;
+      margin-bottom: 1.8rem;
+    }
+    .container {
+      max-width: 540px;
+      margin: auto;
+      padding-top: 2.8em;
+    }
   }
 `;
