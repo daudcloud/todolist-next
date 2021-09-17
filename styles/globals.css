@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
 
 :root {
   --background-dark: hsl(235, 21%, 11%);
   --background-light: hsl(0, 0%, 98%);
+  --list-bg-dark: hsl(235, 24%, 19%);
+  --list-bg-light: hsl(0, 0%, 100%);
+  --list-dark: hsl(234, 39%, 85%);
+  --list-light: hsl(235, 19%, 35%);
 }
 
 body {
@@ -15,7 +19,9 @@ a {
   text-decoration: none;
 }
 
-*,*::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;

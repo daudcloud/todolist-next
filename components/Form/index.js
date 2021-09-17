@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { useList, useAllList } from "../../context/ListContext";
+import { useTheme } from "../../context/ThemeContext";
+import { StyledForm } from "./style";
 
 export default function Form() {
   const [todos, setTodos] = useList();
   const [allTodos, setAllTodos] = useAllList();
   const [listInput, setListInput] = useState();
+  const [darkTheme, setDarkTheme] = useTheme();
   const handleChange = (e) => {
     setListInput(e.target.value);
   };
@@ -22,8 +25,10 @@ export default function Form() {
     setListInput("");
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" value={listInput} onChange={handleChange} />
-    </form>
+    <StyledForm darkTheme={darkTheme ? true : false} onSubmit={handleSubmit}>
+      <div className="input-container">
+        <input type="text" value={listInput} onChange={handleChange} />
+      </div>
+    </StyledForm>
   );
 }
