@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Main = styled.main`
+const Main = styled.main`
   background-color: ${(props) =>
     props.darkTheme ? "var(--background-dark)" : "var(--background-light)"};
   background-image: ${(props) =>
@@ -47,3 +47,5 @@ export const Main = styled.main`
     }
   }
 `;
+
+export default Main;

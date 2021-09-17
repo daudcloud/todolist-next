@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledForm = styled.form`
+const StyledForm = styled.form`
   .input-container {
     display: flex;
     align-items: center;
@@ -48,3 +48,5 @@ export const StyledForm = styled.form`
     }
   }
 `;
+
+export default StyledForm;

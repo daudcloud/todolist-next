@@ -3,7 +3,7 @@ import Image from "next/image";
 import Form from "../components/Form";
 import TodoList from "../components/TodoList";
 import { useTheme } from "../context/ThemeContext";
-import { Main } from "./style";
+import Main from "./style";
 
 export default function Home() {
   const [darkTheme, setDarkTheme] = useTheme();

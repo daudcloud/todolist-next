@@ -1,7 +1,7 @@
 import { useList, useAllList } from "../../context/ListContext";
 import { useTheme } from "../../context/ThemeContext";
 import TodoItem from "../TodoItem";
-import { StyledList } from "./style";
+import StyledList from "./style";
 import Handler from "../Handler";
 
 export default function TodoList() {

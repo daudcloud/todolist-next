@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useList, useAllList } from "../../context/ListContext";
 import { useTheme } from "../../context/ThemeContext";
-import { StyledForm } from "./style";
+import StyledForm from "./style";
 
 export default function Form() {
   const [todos, setTodos] = useList();

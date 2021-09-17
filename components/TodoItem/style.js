@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledItem = styled.div`
+const StyledItem = styled.div`
   background-color: ${(props) =>
     props.darkTheme ? "var(--list-bg-dark)" : "var(--list-bg-light)"};
   color: ${(props) =>
@@ -79,3 +79,5 @@ export const StyledItem = styled.div`
     }
   }
 `;
+
+export default StyledItem;

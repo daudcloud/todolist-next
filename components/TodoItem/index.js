@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useAllList, useList } from "../../context/ListContext";
 import { useTheme } from "../../context/ThemeContext";
-import { StyledItem } from "./style";
+import StyledItem from "./style";
 
 export default function TodoItem({ todo }) {
   const [todos, setTodos] = useList();

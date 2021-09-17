@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledList = styled.div`
+const StyledList = styled.div`
   margin-top: 2rem;
   border-radius: 0.3rem;
   & > * + * {
@@ -25,3 +25,5 @@ export const StyledList = styled.div`
     margin-top: 1rem;
   }
 `;
+
+export default StyledList;

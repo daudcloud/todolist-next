@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import Handler from ".";
 
-export const StyledHandler = styled.div`
+const StyledHandler = styled.div`
   background-color: ${(props) =>
     props.darkTheme ? "var(--list-bg-dark)" : "var(--list-bg-light)"};
   padding: 1.2em 1.6em;
@@ -53,3 +54,5 @@ export const StyledHandler = styled.div`
     }
   }
 `;
+
+export default StyledHandler;

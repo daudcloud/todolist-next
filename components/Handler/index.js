@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useAllList, useList } from "../../context/ListContext";
 import { useTheme } from "../../context/ThemeContext";
-import { StyledHandler } from "./style";
+import StyledHandler from "./style";
 
 export default function Handler() {
   const [active, setActive] = useState(false);
