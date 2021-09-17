@@ -8,7 +8,7 @@ export const Main = styled.main`
       ? "url('/images/bg-desktop-dark.jpg')"
       : "url('/images/bg-desktop-light.jpg')"};
   background-repeat: no-repeat;
-  background-size: 100vw 30vh;
+  background-size: 100vw 50vh;
   min-height: 100vh;
 
   .container {

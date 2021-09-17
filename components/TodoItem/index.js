@@ -1,42 +1,52 @@
+import Image from "next/image";
 import { useAllList, useList } from "../../context/ListContext";
+import { useTheme } from "../../context/ThemeContext";
+import { StyledItem } from "./style";
 
 export default function TodoItem({ todo }) {
   const [todos, setTodos] = useList();
   const [allTodos, setAllTodos] = useAllList();
-  const toggleComplete = (id) => {
+  const [darkTheme, setDarkTheme] = useTheme();
+
+  const toggleComplete = () => {
     setTodos(
-      todos.map((todo) => {
-        if (todo.id === id) {
-          return { ...todo, complete: !todo.complete };
+      todos.map((t) => {
+        if (t.id === todo.id) {
+          return { ...t, complete: !t.complete };
         }
-        return todo;
+        return t;
       })
     );
     setAllTodos(
-      allTodos.map((allTodo) => {
-        if (allTodo.id === id) {
-          return { ...allTodo, complete: !allTodo.complete };
+      allTodos.map((t) => {
+        if (t.id === todo.id) {
+          return { ...t, complete: !t.complete };
         }
-        return allTodo;
+        return t;
       })
     );
   };
 
   const deleteTodo = (id) => {
-    const tempTodos = allTodos.filter((todo) => todo.id !== id);
+    const tempTodos = allTodos.filter((allTodo) => allTodo.id !== id);
     setTodos(tempTodos);
     setAllTodos(tempTodos);
   };
 
   return (
-    <>
-      <div
-        onClick={() => toggleComplete(todo.id)}
-        className={todo.complete ? "red" : ""}
-      >
-        {todo.title} {todo.id}{" "}
-      </div>
-      <span onClick={() => deleteTodo(todo.id)}>delete</span>
-    </>
+    <StyledItem
+      darkTheme={darkTheme ? true : false}
+      className={todo.complete ? "completed" : ""}
+    >
+      <span className="circle" onClick={() => toggleComplete(todo.id)}>
+        {todo.complete && (
+          <Image src="/images/icon-check.svg" width="10" height="10" />
+        )}
+      </span>
+      <span className="todo-title">{todo.title}</span>
+      <span className="delete" onClick={() => deleteTodo(todo.id)}>
+        <Image src="/images/icon-cross.svg" layout="fill" />
+      </span>
+    </StyledItem>
   );
 }

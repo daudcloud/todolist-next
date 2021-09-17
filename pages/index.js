@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 import Form from "../components/Form";
 import TodoList from "../components/TodoList";
-import Handler from "../components/Handler";
 import { useTheme } from "../context/ThemeContext";
 import { Main } from "./style";
 
@@ -34,7 +33,6 @@ export default function Home() {
           <Form />
           <TodoList />
           <br />
-          <Handler />
         </div>
       </Main>
     </>
